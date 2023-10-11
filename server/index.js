@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express")
 const dotenv = require("dotenv")
 const cors = require("cors")
@@ -10,6 +9,7 @@ const customErrorHandler = require("./Middlewares/Errors/customErrorHandler")
 
 
 connectDatabase()
+require("dotenv").config();
 
 const app = express() ;
 
