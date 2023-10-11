@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/auth/login",
+        "mern-blog-app-psi.vercel.app/auth/login",
         { email, password }
       );
       localStorage.setItem("authToken", data.token);

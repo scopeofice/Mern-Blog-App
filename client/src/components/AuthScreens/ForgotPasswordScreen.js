@@ -13,7 +13,7 @@ const ForgotPasswordScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/auth/forgotpassword",
+        "mern-blog-app-psi.vercel.app/auth/forgotpassword",
         { email }
       );
 

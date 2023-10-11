@@ -21,7 +21,7 @@ const ReadListPage = () => {
             setLoading(true)
 
             try {
-                const { data } = await (await axios.get(`http://localhost:5000/user/readList`, config)).data
+                const { data } = await (await axios.get(`mern-blog-app-psi.vercel.app/user/readList`, config)).data
                 setReadList(data)
                 setLoading(false)
             }
@@ -55,7 +55,7 @@ const ReadListPage = () => {
 
                     <div className="readList-top-block">
 
-                        <img src={`http://localhost:5000/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                        <img src={`mern-blog-app-psi.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
 
                         <div className='activeUser-info-wrapper'>

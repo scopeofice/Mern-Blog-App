@@ -25,7 +25,7 @@ const ResetPasswordScreen = () => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/auth/resetpassword?resetPasswordToken=${token}`,
+        `mern-blog-app-psi.vercel.app/auth/resetpassword?resetPasswordToken=${token}`,
         {
           password,
         }

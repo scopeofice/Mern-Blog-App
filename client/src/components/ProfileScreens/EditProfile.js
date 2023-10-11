@@ -29,7 +29,7 @@ const EditProfile = () => {
         formdata.append("photo", photo)
 
         try {
-            const { data } = await axios.post("http://localhost:5000/user/editProfile", formdata, config)
+            const { data } = await axios.post("mern-blog-app-psi.vercel.app/user/editProfile", formdata, config)
 
             setSuccess('Edit Profile successfully ')
             setTimeout(() => {
@@ -121,7 +121,7 @@ const EditProfile = () => {
                                     <div class="absolute">
                                         Currently Image
                                     </div>
-                                    <img src={`http://localhost:5000/userPhotos/${previousPhoto}`} alt="userPhoto" />
+                                    <img src={`mern-blog-app-psi.vercel.app/userPhotos/${previousPhoto}`} alt="userPhoto" />
                                 </div>
 
                             </div>
