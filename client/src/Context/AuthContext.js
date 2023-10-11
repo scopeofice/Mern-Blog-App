@@ -18,7 +18,7 @@ const AuthContextProvider = props => {
 
     const controlAuth = async () => {
       try {
-        const { data } = await axios.get("mern-blog-app-psi.vercel.app/auth/private", config);
+        const { data } = await axios.get("https://myblog-api-flame.vercel.app/auth/private", config);
         setActiveUser(data.user)
       }
       catch (error) {

@@ -28,7 +28,7 @@ const DetailStory = () => {
       setLoading(true)
       var activeUser = {}
       try {
-        const { data } = await axios.get("mern-blog-app-psi.vercel.app/auth/private", {
+        const { data } = await axios.get("https://myblog-api-flame.vercel.app/auth/private", {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -44,7 +44,7 @@ const DetailStory = () => {
       }
 
       try {
-        const { data } = await axios.post(`mern-blog-app-psi.vercel.app/story/${slug}`, { activeUser })
+        const { data } = await axios.post(`https://myblog-api-flame.vercel.app/story/${slug}`, { activeUser })
         setStory(data.data)
         setLikeStatus(data.likeStatus)
         setLikeCount(data.data.likeCount)
@@ -84,7 +84,7 @@ const DetailStory = () => {
     }, 1500)
 
     try {
-      const { data } = await axios.post(`mern-blog-app-psi.vercel.app/story/${slug}/like`, { activeUser }, {
+      const { data } = await axios.post(`https://myblog-api-flame.vercel.app/story/${slug}/like`, { activeUser }, {
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -109,7 +109,7 @@ const DetailStory = () => {
 
       try {
 
-        await axios.delete(`mern-blog-app-psi.vercel.app/story/${slug}/delete`, {
+        await axios.delete(`https://myblog-api-flame.vercel.app/story/${slug}/delete`, {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -139,7 +139,7 @@ const DetailStory = () => {
 
     try {
 
-      const { data } = await axios.post(`mern-blog-app-psi.vercel.app/user/${slug}/addStoryToReadList`, { activeUser }, {
+      const { data } = await axios.post(`https://myblog-api-flame.vercel.app/user/${slug}/addStoryToReadList`, { activeUser }, {
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -174,7 +174,7 @@ const DetailStory = () => {
                   <ul>
                     {story.author &&
                       <li className='story-author-info'>
-                        <img src={`mern-blog-app-psi.vercel.app/userPhotos/${story.author.photo}`} alt={story.author.username} />
+                        <img src={`https://myblog-api-flame.vercel.app/userPhotos/${story.author.photo}`} alt={story.author.username} />
                         <span className='story-author-username'>{story.author.username}  </span>
                       </li>
                     }
@@ -234,7 +234,7 @@ const DetailStory = () => {
               <div className='story-content' >
 
                 <div className="story-banner-img">
-                  <img src={`mern-blog-app-psi.vercel.app/storyImages/${story.image}`} alt={story.title} />
+                  <img src={`https://myblog-api-flame.vercel.app/storyImages/${story.image}`} alt={story.title} />
 
                 </div>
 

@@ -17,7 +17,7 @@ const CommentSidebar = ({ slug, sidebarShowStatus, setSidebarShowStatus, activeU
 
   const getStoryComments = async () => {
     try {
-      const { data } = await axios.get(`mern-blog-app-psi.vercel.app/comment/${slug}/getAllComment`)
+      const { data } = await axios.get(`https://myblog-api-flame.vercel.app/comment/${slug}/getAllComment`)
       setCommentList(data.data)
       setCount(data.count)
     }

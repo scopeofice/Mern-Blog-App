@@ -24,7 +24,7 @@ const RegisterScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "mern-blog-app-psi.vercel.app/auth/register",
+        "https://myblog-api-flame.vercel.app/auth/register",
         {
           username,
           email,

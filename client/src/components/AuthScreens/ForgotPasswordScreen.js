@@ -13,7 +13,7 @@ const ForgotPasswordScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "mern-blog-app-psi.vercel.app/auth/forgotpassword",
+        "https://myblog-api-flame.vercel.app/auth/forgotpassword",
         { email }
       );
 

@@ -21,7 +21,7 @@ const PrivateRoute =( ) => {
             },
         };
         try {
-            const { data } = await axios.get("mern-blog-app-psi.vercel.app/auth/private", config); 
+            const { data } = await axios.get("https://myblog-api-flame.vercel.app/auth/private", config); 
 
             setAuth(true)
             setActiveUser(data.user)

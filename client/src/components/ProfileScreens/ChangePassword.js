@@ -30,7 +30,7 @@ const ChangePassword = () => {
 
         try {
             const { data } = await axios.put(
-                "mern-blog-app-psi.vercel.app/user/changePassword",
+                "https://myblog-api-flame.vercel.app/user/changePassword",
                 {
                     newPassword,
                     oldPassword

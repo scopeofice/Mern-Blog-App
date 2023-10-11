@@ -65,7 +65,7 @@ const Header = () => {
 
                                     :
 
-                                    <img src={`mern-blog-app-psi.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                                    <img src={`https://myblog-api-flame.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
                                 }
 

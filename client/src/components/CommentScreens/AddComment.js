@@ -21,7 +21,7 @@ const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, 
 
         e.preventDefault();
         try {
-            await axios.post(`mern-blog-app-psi.vercel.app/comment/${slug}/addComment`, { content, star }, {
+            await axios.post(`https://myblog-api-flame.vercel.app/comment/${slug}/addComment`, { content, star }, {
                 headers: {
                     "Content-Type": "application/json",
                     authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -93,7 +93,7 @@ const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, 
 
 
                     <div className={showStatus ? 'activeuser-info ' : 'activeuser-info hidden '}>
-                        <img src={`mern-blog-app-psi.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                        <img src={`https://myblog-api-flame.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
                         <span className='username'>{activeUser.username}  </span>
                     </div>
 
