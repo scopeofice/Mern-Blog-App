@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express")
 const dotenv = require("dotenv")
 const cors = require("cors")
@@ -7,9 +8,6 @@ const IndexRoute = require("./Routers/index")
 const connectDatabase = require("./Helpers/database/connectDatabase")
 const customErrorHandler = require("./Middlewares/Errors/customErrorHandler")
 
-dotenv.config({
-    path:  './Config/config.env'
-})
 
 connectDatabase()
 
