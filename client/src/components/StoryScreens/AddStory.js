@@ -104,8 +104,8 @@ const AddStory = () => {
                         }}
                     />
                 </div>
-                <button type='submit' disabled={image ? false : true} className={image ? 'addStory-btn' : 'dis-btn'}
-                >Publish </button>
+                <button type='submit' className='addStory-btn'>Publish </button>
+                {/* <button type='submit' disabled={image ? false : true} className={image ? 'addStory-btn' : 'dis-btn'}>Publish </button> */}
             </form>
 
         </div>
