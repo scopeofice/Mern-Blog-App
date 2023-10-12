@@ -65,7 +65,7 @@ const Header = () => {
 
                                     :
 
-                                    <img src={`http://ec2-13-233-115-7.ap-south-1.compute.amazonaws.com:5000//userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                                    <img src={`http://ec2-13-235-104-208.ap-south-1.compute.amazonaws.com:5000/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
                                 }
 
