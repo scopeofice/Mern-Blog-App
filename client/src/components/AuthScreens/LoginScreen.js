@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/auth/login",
+        "http://ec2-13-233-115-7.ap-south-1.compute.amazonaws.com:5000//auth/login",
         { email, password }
       );
       localStorage.setItem("authToken", data.token);

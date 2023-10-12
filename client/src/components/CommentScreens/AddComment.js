@@ -21,7 +21,7 @@ const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, 
 
         e.preventDefault();
         try {
-            await axios.post(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/comment/${slug}/addComment`, { content, star }, {
+            await axios.post(`http://ec2-13-233-115-7.ap-south-1.compute.amazonaws.com:5000//comment/${slug}/addComment`, { content, star }, {
                 headers: {
                     "Content-Type": "application/json",
                     authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -93,7 +93,7 @@ const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, 
 
 
                     <div className={showStatus ? 'activeuser-info ' : 'activeuser-info hidden '}>
-                        <img src={`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                        <img src={`http://ec2-13-233-115-7.ap-south-1.compute.amazonaws.com:5000//userPhotos/${activeUser.photo}`} alt={activeUser.username} />
                         <span className='username'>{activeUser.username}  </span>
                     </div>
 

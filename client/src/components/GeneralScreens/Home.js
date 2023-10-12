@@ -24,7 +24,7 @@ const Home = () => {
 
       setLoading(true)
       try {
-        const { data } = await axios.get(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/story/getAllStories?search=${searchKey || ""}&page=${page}`)
+        const { data } = await axios.get(`http://ec2-13-233-115-7.ap-south-1.compute.amazonaws.com:5000//story/getAllStories?search=${searchKey || ""}&page=${page}`)
 
         if (searchKey) {
           navigate({
