@@ -21,7 +21,7 @@ const PrivateRoute =( ) => {
             },
         };
         try {
-            const { data } = await axios.get("http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//auth/private", config); 
+            const { data } = await axios.get("http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/auth/private", config); 
 
             setAuth(true)
             setActiveUser(data.user)

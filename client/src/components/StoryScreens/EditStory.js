@@ -27,7 +27,7 @@ const EditStory = () => {
         const getStoryInfo = async () => {
             setLoading(true)
             try {
-                const { data } = await axios.get(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//story/editStory/${slug}`, config)
+                const { data } = await axios.get(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/story/editStory/${slug}`, config)
                 setStory(data.data)
                 setTitle(data.data.title)
                 setContent(data.data.content)
@@ -51,7 +51,7 @@ const EditStory = () => {
         formdata.append("previousImage", previousImage)
 
         try {
-            const { data } = await axios.put(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//story/${slug}/edit`, formdata, config)
+            const { data } = await axios.put(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/story/${slug}/edit`, formdata, config)
 
             setSuccess('Edit Story successfully ')
 
@@ -108,7 +108,7 @@ const EditStory = () => {
                                 <div class="absolute">
                                     Currently Image
                                 </div>
-                                <img src={`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//storyImages/${previousImage}`} alt="storyImage" />
+                                <img src={`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/storyImages/${previousImage}`} alt="storyImage" />
                             </div>
                             <div class="StoryImageField">
                                 <AiOutlineUpload />

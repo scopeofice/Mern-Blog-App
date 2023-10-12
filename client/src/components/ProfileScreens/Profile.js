@@ -29,7 +29,7 @@ const Profile = () => {
             setLoading(true)
 
             try {
-                const { data } = await axios.get("http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//user/profile", config)
+                const { data } = await axios.get("http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000/user/profile", config)
 
                 setUser(data.data)
 
