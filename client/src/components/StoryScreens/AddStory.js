@@ -36,7 +36,7 @@ const AddStory = () => {
         formdata.append("content", content)
 
         try {
-            const { data } = await axios.post("http://ec2-13-235-104-208.ap-south-1.compute.amazonaws.com:5000/story/addstory", formdata, config)
+            const { data } = await axios.post("https://myblog-server-one.vercel.app/story/addstory", formdata, config)
             setSuccess('Add story successfully ')
 
             clearInputs()

@@ -30,7 +30,7 @@ const ChangePassword = () => {
 
         try {
             const { data } = await axios.put(
-                "http://ec2-13-235-104-208.ap-south-1.compute.amazonaws.com:5000/user/changePassword",
+                "https://myblog-server-one.vercel.app/user/changePassword",
                 {
                     newPassword,
                     oldPassword

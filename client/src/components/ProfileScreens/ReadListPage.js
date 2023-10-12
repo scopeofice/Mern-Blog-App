@@ -21,7 +21,7 @@ const ReadListPage = () => {
             setLoading(true)
 
             try {
-                const { data } = await (await axios.get(`http://ec2-13-235-104-208.ap-south-1.compute.amazonaws.com:5000/user/readList`, config)).data
+                const { data } = await (await axios.get(`https://myblog-server-one.vercel.app/user/readList`, config)).data
                 setReadList(data)
                 setLoading(false)
             }
@@ -55,7 +55,7 @@ const ReadListPage = () => {
 
                     <div className="readList-top-block">
 
-                        <img src={`http://ec2-13-235-104-208.ap-south-1.compute.amazonaws.com:5000/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                        <img src={`https://myblog-server-one.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
 
                         <div className='activeUser-info-wrapper'>

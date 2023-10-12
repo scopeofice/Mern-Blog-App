@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "http://ec2-13-235-104-208.ap-south-1.compute.amazonaws.com:5000/auth/login",
+        "https://myblog-server-one.vercel.app/auth/login",
         { email, password }
       );
       localStorage.setItem("authToken", data.token);
