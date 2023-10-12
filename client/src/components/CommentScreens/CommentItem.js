@@ -19,7 +19,7 @@ const CommentItem = ({ comment, activeUser }) => {
 
             const comment_id = comment._id
             try {
-                const { data } = await axios.post(`https://myblog-api-flame.vercel.app/comment/${comment_id}/getCommentLikeStatus`, { activeUser }, {
+                const { data } = await axios.post(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//comment/${comment_id}/getCommentLikeStatus`, { activeUser }, {
                     headers: {
                         "Content-Type": "application/json",
                         authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -50,7 +50,7 @@ const CommentItem = ({ comment, activeUser }) => {
         const comment_id = comment._id
 
         try {
-            const { data } = await axios.post(`https://myblog-api-flame.vercel.app/comment/${comment_id}/like`, { activeUser }, {
+            const { data } = await axios.post(`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//comment/${comment_id}/like`, { activeUser }, {
                 headers: {
                     "Content-Type": "application/json",
                     authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -73,7 +73,7 @@ const CommentItem = ({ comment, activeUser }) => {
             <div className="comment-top-block">
 
                 <section>
-                    <img src={`https://myblog-api-flame.vercel.app/userPhotos/${comment.author.photo}`} alt={comment.author.username} width="35" />
+                    <img src={`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//userPhotos/${comment.author.photo}`} alt={comment.author.username} width="35" />
 
                     <div>
                         <span className='comment-author-username' >{comment.author.username}</span>

@@ -29,7 +29,7 @@ const EditProfile = () => {
         formdata.append("photo", photo)
 
         try {
-            const { data } = await axios.post("https://myblog-api-flame.vercel.app/user/editProfile", formdata, config)
+            const { data } = await axios.post("http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//user/editProfile", formdata, config)
 
             setSuccess('Edit Profile successfully ')
             setTimeout(() => {
@@ -121,7 +121,7 @@ const EditProfile = () => {
                                     <div class="absolute">
                                         Currently Image
                                     </div>
-                                    <img src={`https://myblog-api-flame.vercel.app/userPhotos/${previousPhoto}`} alt="userPhoto" />
+                                    <img src={`http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//userPhotos/${previousPhoto}`} alt="userPhoto" />
                                 </div>
 
                             </div>

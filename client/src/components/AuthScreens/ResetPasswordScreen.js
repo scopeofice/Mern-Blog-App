@@ -25,7 +25,7 @@ const ResetPasswordScreen = () => {
 
     try {
       const { data } = await axios.put(
-        `https://myblog-api-flame.vercel.app/auth/resetpassword?resetPasswordToken=${token}`,
+        `http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//auth/resetpassword?resetPasswordToken=${token}`,
         {
           password,
         }

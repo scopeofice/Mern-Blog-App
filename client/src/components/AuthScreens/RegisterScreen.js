@@ -24,7 +24,7 @@ const RegisterScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "https://myblog-api-flame.vercel.app/auth/register",
+        "http://ec2-13-233-56-102.ap-south-1.compute.amazonaws.com:5000//auth/register",
         {
           username,
           email,
