@@ -65,7 +65,7 @@ const Header = () => {
 
                                     :
 
-                                    <img src={`https://myblog-server-one.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                                    <img src={`http://13.232.167.112:5000/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
                                 }
 

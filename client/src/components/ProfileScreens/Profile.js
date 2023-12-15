@@ -29,7 +29,7 @@ const Profile = () => {
             setLoading(true)
 
             try {
-                const { data } = await axios.get("https://myblog-server-one.vercel.app/user/profile", config)
+                const { data } = await axios.get("http://13.232.167.112:5000/user/profile", config)
 
                 setUser(data.data)
 

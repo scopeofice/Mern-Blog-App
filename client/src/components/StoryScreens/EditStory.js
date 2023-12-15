@@ -27,7 +27,7 @@ const EditStory = () => {
         const getStoryInfo = async () => {
             setLoading(true)
             try {
-                const { data } = await axios.get(`https://myblog-server-one.vercel.app/story/editStory/${slug}`, config)
+                const { data } = await axios.get(`http://13.232.167.112:5000/story/editStory/${slug}`, config)
                 setStory(data.data)
                 setTitle(data.data.title)
                 setContent(data.data.content)
@@ -51,7 +51,7 @@ const EditStory = () => {
         formdata.append("previousImage", previousImage)
 
         try {
-            const { data } = await axios.put(`https://myblog-server-one.vercel.app/story/${slug}/edit`, formdata, config)
+            const { data } = await axios.put(`http://13.232.167.112:5000/story/${slug}/edit`, formdata, config)
 
             setSuccess('Edit Story successfully ')
 
@@ -108,7 +108,7 @@ const EditStory = () => {
                                 <div class="absolute">
                                     Currently Image
                                 </div>
-                                <img src={`https://myblog-server-one.vercel.app/storyImages/${previousImage}`} alt="storyImage" />
+                                <img src={`http://13.232.167.112:5000/storyImages/${previousImage}`} alt="storyImage" />
                             </div>
                             <div class="StoryImageField">
                                 <AiOutlineUpload />

@@ -72,7 +72,7 @@ const ReadListStoryItem = ({ story, editDate }) => {
 
             <section>
                 <div className="story-Image-Wrap">
-                    <img src={`https://myblog-server-one.vercel.app/storyImages/${story.image}`} alt={story.title} width="180px" />
+                    <img src={`http://13.232.167.112:5000/storyImages/${story.image}`} alt={story.title} width="180px" />
                 </div>
 
             </section>

@@ -24,7 +24,7 @@ const Home = () => {
 
       setLoading(true)
       try {
-        const { data } = await axios.get(`https://myblog-server-one.vercel.app/story/getAllStories?search=${searchKey || ""}&page=${page}`)
+        const { data } = await axios.get(`http://13.232.167.112:5000/story/getAllStories?search=${searchKey || ""}&page=${page}`)
 
         if (searchKey) {
           navigate({

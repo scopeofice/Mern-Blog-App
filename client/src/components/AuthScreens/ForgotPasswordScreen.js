@@ -13,7 +13,7 @@ const ForgotPasswordScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "https://myblog-server-one.vercel.app/auth/forgotpassword",
+        "http://13.232.167.112:5000/auth/forgotpassword",
         { email }
       );
 

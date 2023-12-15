@@ -21,12 +21,13 @@ const ReadListPage = () => {
             setLoading(true)
 
             try {
-                const { data } = await (await axios.get(`https://myblog-server-one.vercel.app/user/readList`, config)).data
+                const { data } = await (await axios.get(`http://13.232.167.112:5000/user/readList`, config)).data
                 setReadList(data)
                 setLoading(false)
             }
             catch (error) {
                 navigate("/")
+                console.log(error.message)
             }
         }
         getUserReadingList()
@@ -55,7 +56,7 @@ const ReadListPage = () => {
 
                     <div className="readList-top-block">
 
-                        <img src={`https://myblog-server-one.vercel.app/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                        <img src={`http://13.232.167.112:5000/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
 
                         <div className='activeUser-info-wrapper'>
