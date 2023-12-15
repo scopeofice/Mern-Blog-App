@@ -56,57 +56,57 @@ const login  = asyncErrorWrapper (async(req,res,next) => {
 })
 
 
-
+const URI = "https://myblog-server-one.vercel.app"
 
 const forgotpassword  = asyncErrorWrapper( async (req,res,next) => {
-    // const {URI,EMAIL_USERNAME} = process.env ; 
+    const {URI,EMAIL_USERNAME} = process.env ; 
 
-    // const resetEmail = req.body.email  ;
+    const resetEmail = req.body.email  ;
 
-    // const user = await User.findOne({email : resetEmail})
+    const user = await User.findOne({email : resetEmail})
 
-    // if(!user ) {
-    //     return next(new CustomError( "There is no user with that email",400))
-    // }
+    if(!user ) {
+        return next(new CustomError( "There is no user with that email",400))
+    }
 
-    // const resetPasswordToken = user.getResetPasswordTokenFromUser();
+    const resetPasswordToken = user.getResetPasswordTokenFromUser();
 
-    // await user.save()  ;
+    await user.save()  ;
 
-    // const resetPasswordUrl = `${URI}/resetpassword?resetPasswordToken=${resetPasswordToken}`
+    const resetPasswordUrl = `${URI}/resetpassword?resetPasswordToken=${resetPasswordToken}`
 
-    // const emailTemplate = `
-    // <h3 style="color : red "> Reset Your Password </h3>
-    // <p> This <a href=${resetPasswordUrl}   
-    //  target='_blank'  >Link </a> will expire in 1 hours </p> 
-    // `;
+    const emailTemplate = `
+    <h3 style="color : red "> Reset Your Password </h3>
+    <p> This <a href=${resetPasswordUrl}   
+     target='_blank'  >Link </a> will expire in 1 hours </p> 
+    `;
 
-    // try {
+    try {
 
-    //     sendEmail({
-    //         from: EMAIL_USERNAME,
-    //         to: resetEmail, 
-    //         subject: " ✔ Reset Your Password  ✔", 
-    //         html: emailTemplate
-    //     })
+        sendEmail({
+            from: EMAIL_USERNAME,
+            to: resetEmail, 
+            subject: " ✔ Reset Your Password  ✔", 
+            html: emailTemplate
+        })
 
-    //     return res.status(200)
-    //     .json({
-    //         success: true,
-    //         message: "Email Send"
-    //     })
+        return res.status(200)
+        .json({
+            success: true,
+            message: "Email Send"
+        })
 
-    // }
+    }
 
-    // catch(error ) {
+    catch(error ) {
 
-    //     user.resetPasswordToken = undefined ;
-    //     user.resetPasswordExpire = undefined  ;
+        user.resetPasswordToken = undefined ;
+        user.resetPasswordExpire = undefined  ;
 
-    //     await user.save();
+        await user.save();
    
-    //     return next(new CustomError('Email could not be send ', 500))
-    // }
+        return next(new CustomError('Email could not be send ', 500))
+    }
 
 
 
