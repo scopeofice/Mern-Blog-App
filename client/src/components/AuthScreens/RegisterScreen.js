@@ -24,7 +24,7 @@ const RegisterScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "http://13.232.167.112:5000/auth/register",
+        "https://myblog-server-one.vercel.app/auth/register",
         {
           username,
           email,

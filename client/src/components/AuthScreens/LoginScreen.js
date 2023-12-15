@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "http://13.232.167.112:5000/auth/login",
+        "https://myblog-server-one.vercel.app/auth/login",
         { email, password }
       );
       localStorage.setItem("authToken", data.token);

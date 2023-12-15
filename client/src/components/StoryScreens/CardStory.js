@@ -26,7 +26,7 @@ const Story = ({ story }) => {
         <div className="story-card">
             <Link to={`/story/${story.slug}`} className="story-link">
 
-                <img className=" story-image" src={`http://13.232.167.112:5000/storyImages/${story.image}`} alt={story.title} />
+                <img className=" story-image" src={`https://myblog-server-one.vercel.app/storyImages/${story.image}`} alt={story.title} />
                 <div className="story-content-wrapper">
 
                     <h5 className="story-title">

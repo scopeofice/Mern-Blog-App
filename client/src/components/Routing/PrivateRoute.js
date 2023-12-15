@@ -21,7 +21,7 @@ const PrivateRoute =( ) => {
             },
         };
         try {
-            const { data } = await axios.get("http://13.232.167.112:5000/auth/private", config); 
+            const { data } = await axios.get("https://myblog-server-one.vercel.app/auth/private", config); 
 
             setAuth(true)
             setActiveUser(data.user)
